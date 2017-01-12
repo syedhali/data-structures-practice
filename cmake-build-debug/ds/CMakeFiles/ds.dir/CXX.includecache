@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../ds/include/ds/Stack.hpp
+exception
+-
+string
+-
+sstream
+-
+
+/Users/haris/Documents/code/learning/data-structures-practice/ds/src/Stack.cpp
+Stack.hpp
+/Users/haris/Documents/code/learning/data-structures-practice/ds/src/Stack.hpp
+

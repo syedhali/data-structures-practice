@@ -1,0 +1,930 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="data_structures_practice" targetName="gtest_main" />
+      <config projectName="data_structures_practice" targetName="gtest" />
+      <config projectName="data_structures_practice" targetName="gmock_main" />
+      <config projectName="data_structures_practice" targetName="data_structures_practice" />
+      <config projectName="data_structures_practice" targetName="gmock" />
+      <config projectName="data_structures_practice" targetName="ds" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ffb90f21-2ee6-4fd5-ba7f-cfbaa8066cf2" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gtest-binary-tree-tests.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gtest-binary-tree-tests.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding>
+                <element signature="e#48#72#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ds/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Stack.hpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ds/include/Stack.hpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1005">
+              <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+              <folding>
+                <element signature="e#146#166#0" expanded="true" />
+                <element signature="e#259#268#0" expanded="true" />
+                <element signature="e#1684#1693#0" expanded="true" />
+                <marker date="1484259967000" expanded="true" signature="218:3229" ph="{...}" />
+                <marker date="1484259967000" expanded="true" signature="240:3227" ph="{...}" />
+                <marker date="1484259967000" expanded="true" signature="288:1338" ph="{...}" />
+                <marker date="1484259967000" expanded="true" signature="468:575" ph="{...}" />
+                <marker date="1484259967000" expanded="true" signature="601:646" ph="{...}" />
+                <marker date="1484259967000" expanded="true" signature="681:726" ph="{...}" />
+                <marker date="1484259967000" expanded="true" signature="756:801" ph="{...}" />
+                <marker date="1484259967000" expanded="true" signature="840:885" ph="{...}" />
+                <marker date="1484259967000" expanded="true" signature="923:1327" ph="{...}" />
+                <marker date="1484259967000" expanded="true" signature="1399:1500" ph="{...}" />
+                <marker date="1484259967000" expanded="true" signature="1714:3219" ph="{...}" />
+                <marker date="1484259967000" expanded="true" signature="1931:2036" ph="{...}" />
+                <marker date="1484259967000" expanded="true" signature="2098:2337" ph="{...}" />
+                <marker date="1484259967000" expanded="true" signature="2390:2756" ph="{...}" />
+                <marker date="1484259967000" expanded="true" signature="2810:2971" ph="{...}" />
+                <marker date="1484259967000" expanded="true" signature="3000:3050" ph="{...}" />
+                <marker date="1484259967000" expanded="true" signature="3078:3135" ph="{...}" />
+                <marker date="1484259967000" expanded="true" signature="3163:3208" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exception" pinned="false" current-in-tab="false">
+        <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/exception">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1425">
+              <caret line="95" column="36" lean-forward="false" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tree.hpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ds/include/Tree.hpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+              <folding>
+                <element signature="e#196#214#0" expanded="true" />
+                <element signature="e#339#348#0" expanded="true" />
+                <element signature="e#2342#2351#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gtest-stack-tests.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gtest-stack-tests.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="23" selection-end-column="2" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gtest-internal.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/googletest/googletest/include/gtest/internal/gtest-internal.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="305">
+              <caret line="499" column="46" lean-forward="false" selection-start-line="499" selection-start-column="46" selection-end-line="499" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gtest.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/googletest/googletest/include/gtest/gtest.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5820">
+              <caret line="388" column="0" lean-forward="false" selection-start-line="388" selection-start-column="0" selection-end-line="396" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/googletest/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>class</find>
+      <find>Node_hpp</find>
+      <find>BINARY_TREE_STACK_H</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>typename</replace>
+      <replace>DS_TREE_HPP</replace>
+      <replace>DS_STACK_H</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/ds/include/BinaryTree.hpp" />
+        <option value="$PROJECT_DIR$/ds/include/Tree.hpp" />
+        <option value="$PROJECT_DIR$/ds/include/Stack.hpp" />
+        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/ds/src/Stack.cpp" />
+        <option value="$PROJECT_DIR$/ds/include/ds/Tree.hpp" />
+        <option value="$PROJECT_DIR$/ds/include/ds/Stack.hpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/ds/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/gtest-stack-tests.cpp" />
+        <option value="$PROJECT_DIR$/gtest-binary-tree-tests.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="873" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data_structures_practice" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data-structures-practice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data_structures_practice" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data-structures-practice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data_structures_practice" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data-structures-practice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="include" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Cidr.FilesView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.CMake" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ds/include" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Build All">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="data_structures_practice" TARGET_NAME="data_structures_practice" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Build All" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="data_structures_practice" TARGET_NAME="data_structures_practice" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="data_structures_practice" RUN_TARGET_NAME="data_structures_practice">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="data_structures_practice" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="data_structures_practice" TARGET_NAME="data_structures_practice" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="data_structures_practice" RUN_TARGET_NAME="data_structures_practice">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ds" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="data_structures_practice" TARGET_NAME="ds" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="gmock" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="data_structures_practice" TARGET_NAME="gmock" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="gmock_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="data_structures_practice" TARGET_NAME="gmock_main" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="gtest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="data_structures_practice" TARGET_NAME="gtest" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="data_structures_practice" TARGET_NAME="gtest_main" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <list size="7">
+      <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
+      <item index="1" class="java.lang.String" itemvalue="Application.data_structures_practice" />
+      <item index="2" class="java.lang.String" itemvalue="Application.ds" />
+      <item index="3" class="java.lang.String" itemvalue="Application.gmock" />
+      <item index="4" class="java.lang.String" itemvalue="Application.gmock_main" />
+      <item index="5" class="java.lang.String" itemvalue="Application.gtest" />
+      <item index="6" class="java.lang.String" itemvalue="Application.gtest_main" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ffb90f21-2ee6-4fd5-ba7f-cfbaa8066cf2" name="Default" comment="" />
+      <created>1484251006128</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1484251006128</updated>
+      <workItem from="1484251008039" duration="5065000" />
+      <workItem from="1484258076519" duration="2901000" />
+      <workItem from="1484261069220" duration="7000" />
+      <workItem from="1484261430954" duration="107000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="8413000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.50277776" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329602" sideWeight="0.49722221" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/ds/include/Stack.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1005">
+          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding>
+            <element signature="e#146#166#0" expanded="true" />
+            <element signature="e#259#268#0" expanded="true" />
+            <element signature="e#1684#1693#0" expanded="true" />
+            <marker date="1484259967000" expanded="true" signature="218:3229" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="240:3227" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="288:1338" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="468:575" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="601:646" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="681:726" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="756:801" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="840:885" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="923:1327" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="1399:1500" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="1714:3219" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="1931:2036" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="2098:2337" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="2390:2756" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="2810:2971" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="3000:3050" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="3078:3135" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="3163:3208" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/exception">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1425">
+          <caret line="95" column="36" lean-forward="false" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ds/include/Tree.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+          <folding>
+            <element signature="e#196#214#0" expanded="true" />
+            <element signature="e#339#348#0" expanded="true" />
+            <element signature="e#2342#2351#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gtest-stack-tests.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="23" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/googletest/googletest/include/gtest/internal/gtest-internal.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7245">
+          <caret line="483" column="0" lean-forward="false" selection-start-line="483" selection-start-column="0" selection-end-line="483" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/googletest/googletest/include/gtest/gtest.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5820">
+          <caret line="388" column="0" lean-forward="false" selection-start-line="388" selection-start-column="0" selection-end-line="396" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/googletest/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ds/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="31" lean-forward="false" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ds/include/Stack.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2010">
+          <caret line="134" column="0" lean-forward="true" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+          <folding>
+            <element signature="e#146#166#0" expanded="true" />
+            <element signature="e#259#268#0" expanded="true" />
+            <element signature="e#1684#1693#0" expanded="true" />
+            <marker date="1484259967000" expanded="true" signature="218:3229" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="240:3227" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="288:1338" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="468:575" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="601:646" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="681:726" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="756:801" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="840:885" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="923:1327" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="1399:1500" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="1714:3219" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="1931:2036" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="2098:2337" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="2390:2756" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="2810:2971" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="3000:3050" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="3078:3135" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="3163:3208" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ds/include/Tree.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+          <folding>
+            <element signature="e#196#214#0" expanded="true" />
+            <element signature="e#339#348#0" expanded="true" />
+            <element signature="e#2342#2351#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gtest-stack-tests.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/googletest/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ds/include/Tree.hpp" />
+    <entry file="file://$PROJECT_DIR$/ds/include/Stack.hpp" />
+    <entry file="file://$PROJECT_DIR$/googletest/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ds/src/Stack.cpp" />
+    <entry file="file://$PROJECT_DIR$/ds/include/Tree.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+          <folding>
+            <element signature="e#196#214#0" expanded="true" />
+            <element signature="e#339#348#0" expanded="true" />
+            <element signature="e#2342#2351#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/googletest/googletest/include/gtest/gtest.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="388" column="0" lean-forward="false" selection-start-line="388" selection-start-column="0" selection-end-line="396" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/googletest/googletest/include/gtest/internal/gtest-internal.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="483" column="0" lean-forward="false" selection-start-line="483" selection-start-column="0" selection-end-line="483" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/exception">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="95" column="36" lean-forward="false" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ds/include/Stack.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-704">
+          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding>
+            <element signature="e#146#166#0" expanded="true" />
+            <element signature="e#259#268#0" expanded="true" />
+            <element signature="e#1684#1693#0" expanded="true" />
+            <marker date="1484259967000" expanded="true" signature="218:3229" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="240:3227" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="288:1338" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="468:575" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="601:646" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="681:726" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="756:801" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="840:885" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="923:1327" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="1399:1500" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="1714:3219" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="1931:2036" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="2098:2337" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="2390:2756" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="2810:2971" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="3000:3050" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="3078:3135" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="3163:3208" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ds/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gtest-stack-tests.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="23" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gtest-binary-tree-tests.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="25" />
+          <folding>
+            <element signature="e#48#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gtest-binary-tree-tests.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#48#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ds/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ds/include/Stack.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1005">
+          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding>
+            <element signature="e#146#166#0" expanded="true" />
+            <element signature="e#259#268#0" expanded="true" />
+            <element signature="e#1684#1693#0" expanded="true" />
+            <marker date="1484259967000" expanded="true" signature="218:3229" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="240:3227" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="288:1338" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="468:575" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="601:646" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="681:726" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="756:801" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="840:885" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="923:1327" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="1399:1500" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="1714:3219" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="1931:2036" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="2098:2337" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="2390:2756" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="2810:2971" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="3000:3050" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="3078:3135" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="3163:3208" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/exception">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1395">
+          <caret line="95" column="36" lean-forward="false" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ds/include/Tree.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+          <folding>
+            <element signature="e#196#214#0" expanded="true" />
+            <element signature="e#339#348#0" expanded="true" />
+            <element signature="e#2342#2351#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ds/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="31" lean-forward="false" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ds/include/Stack.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2010">
+          <caret line="134" column="0" lean-forward="true" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+          <folding>
+            <element signature="e#146#166#0" expanded="true" />
+            <element signature="e#259#268#0" expanded="true" />
+            <element signature="e#1684#1693#0" expanded="true" />
+            <marker date="1484259967000" expanded="true" signature="218:3229" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="240:3227" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="288:1338" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="468:575" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="601:646" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="681:726" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="756:801" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="840:885" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="923:1327" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="1399:1500" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="1714:3219" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="1931:2036" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="2098:2337" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="2390:2756" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="2810:2971" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="3000:3050" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="3078:3135" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="3163:3208" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ds/include/Tree.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+          <folding>
+            <element signature="e#196#214#0" expanded="true" />
+            <element signature="e#339#348#0" expanded="true" />
+            <element signature="e#2342#2351#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gtest-stack-tests.cpp" />
+    <entry file="file://$PROJECT_DIR$/googletest/CMakeLists.txt" />
+    <entry file="file://$PROJECT_DIR$/ds/include/Tree.hpp" />
+    <entry file="file://$PROJECT_DIR$/ds/include/Stack.hpp" />
+    <entry file="file://$PROJECT_DIR$/googletest/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ds/src/Stack.cpp" />
+    <entry file="file://$PROJECT_DIR$/ds/include/Tree.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+          <folding>
+            <element signature="e#196#214#0" expanded="true" />
+            <element signature="e#339#348#0" expanded="true" />
+            <element signature="e#2342#2351#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/googletest/googletest/include/gtest/gtest.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5820">
+          <caret line="388" column="0" lean-forward="false" selection-start-line="388" selection-start-column="0" selection-end-line="396" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/exception">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1425">
+          <caret line="95" column="36" lean-forward="false" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ds/include/Stack.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1005">
+          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding>
+            <element signature="e#146#166#0" expanded="true" />
+            <element signature="e#259#268#0" expanded="true" />
+            <element signature="e#1684#1693#0" expanded="true" />
+            <marker date="1484259967000" expanded="true" signature="218:3229" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="240:3227" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="288:1338" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="468:575" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="601:646" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="681:726" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="756:801" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="840:885" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="923:1327" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="1399:1500" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="1714:3219" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="1931:2036" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="2098:2337" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="2390:2756" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="2810:2971" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="3000:3050" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="3078:3135" ph="{...}" />
+            <marker date="1484259967000" expanded="true" signature="3163:3208" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ds/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gtest-stack-tests.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="23" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gtest-binary-tree-tests.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#48#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/googletest/googletest/include/gtest/internal/gtest-internal.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="499" column="46" lean-forward="false" selection-start-line="499" selection-start-column="46" selection-end-line="499" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
