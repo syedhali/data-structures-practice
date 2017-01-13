@@ -49,15 +49,12 @@ namespace ds {
             std::string getString() {
                 std::stringstream ss;
                 ss << std::endl << "Node (" << getData() << ") { " << std::endl;
-
                 if (mNext != nullptr) {
                     ss << "next: " << mNext->getString();
                 } else {
                     ss << "next: null" << std::endl;
                 }
-
                 ss << "}" << std::endl;
-
                 return ss.str();
             }
 
@@ -76,11 +73,11 @@ namespace ds {
         template<class T>
         class Stack {
         private:
-            Node<T> *mTop = nullptr;
+            Node<T> * mTop = nullptr;
             int mSize = 0;
 
         public:
-            Stack(){
+            Stack() {
 
             }
 

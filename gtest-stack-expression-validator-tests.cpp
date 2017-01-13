@@ -2,7 +2,7 @@
 // Created by Syed Haris Ali on 1/12/17.
 //
 
-#include <Stack/ExpressionValidator.hpp>
+#include <Stack/ExpressionValidator.h>
 #include "gtest/gtest.h"
 
 using namespace ds::stack;
