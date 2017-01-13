@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "Stack.hpp"
+#include "Stack/Stack.hpp"
 #include "gtest/gtest.h"
 
 using namespace ds::stack;
@@ -8,12 +8,10 @@ using namespace ds::stack;
 class StackTest : public ::testing::Test {
 
 protected:
-    Node<int> *mTop = nullptr;
     Stack<int> *mStack = nullptr;
 
     StackTest() {
-        mTop = new Node<int>(100, nullptr);
-        mStack = new Stack<int>(mTop);
+        mStack = new Stack<int>();
     }
 
     ~StackTest() {
@@ -23,25 +21,35 @@ protected:
     }
 };
 
-TEST_F(StackTest, TopNodeIsValid) {
-    ASSERT_EQ(mTop->getData(), 100);
-    ASSERT_EQ(mTop->getNext(), nullptr);
+TEST_F(StackTest, InitialValues) {
+    ASSERT_EQ(mStack->getSize(), 0);
 }
 
-TEST_F(StackTest, InitialValuesMatchTop) {
-    ASSERT_EQ(mStack->getSize(), 1);
-    ASSERT_EQ(mStack->peek(), mTop->getData());
+TEST_F(StackTest, IsEmpty) {
+    ASSERT_TRUE(mStack->isEmpty());
+}
+
+TEST_F(StackTest, IsFull) {
+    ASSERT_FALSE(mStack->isFull());
+    for (int i = 0; i < STACK_MAX_SIZE; ++i) {
+        mStack->push(i);
+    }
+    ASSERT_TRUE(mStack->isFull());
 }
 
 TEST_F(StackTest, Push) {
     mStack->push(50);
-
-    ASSERT_EQ(mStack->getSize(), 2);
+    ASSERT_EQ(mStack->getSize(), 1);
     ASSERT_EQ(mStack->peek(), 50);
 }
 
 TEST_F(StackTest, Pop) {
-    mStack->pop();
+    mStack->push(100);
+    ASSERT_EQ(mStack->getSize(), 1);
+    ASSERT_EQ(mStack->peek(), 100);
 
+    mStack->pop();
     ASSERT_EQ(mStack->getSize(), 0);
+    ASSERT_THROW(mStack->peek(), StackUnderflowException);
+    ASSERT_THROW(mStack->pop(), StackUnderflowException);
 }

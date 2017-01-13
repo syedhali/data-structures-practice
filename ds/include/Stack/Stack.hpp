@@ -13,6 +13,8 @@
 namespace ds {
     namespace stack {
 
+        const int STACK_MAX_SIZE = 40;
+
         template<class T>
         class Node {
         private:
@@ -74,13 +76,13 @@ namespace ds {
         template<class T>
         class Stack {
         private:
-            int const MAX_SIZE = 40;
-
             Node<T> *mTop = nullptr;
             int mSize = 0;
 
         public:
-            Stack(Node<T> *top) : mTop(top) { mSize++; }
+            Stack(){
+
+            }
 
             ~Stack() {
                 if (mTop != nullptr) {
@@ -89,7 +91,7 @@ namespace ds {
             }
 
             void push(T data) throw(StackOverflowException) {
-                if (mSize == MAX_SIZE) {
+                if (mSize == STACK_MAX_SIZE) {
                     throw StackOverflowException();
                 }
 
@@ -128,7 +130,7 @@ namespace ds {
             }
 
             bool isFull() {
-                return mSize == MAX_SIZE;
+                return mSize == STACK_MAX_SIZE;
             }
 
             int getSize() {
@@ -136,7 +138,6 @@ namespace ds {
             }
 
         };
-
     }
 }
 
