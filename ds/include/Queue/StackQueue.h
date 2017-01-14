@@ -26,26 +26,38 @@ namespace ds {
                 mReverseStack = Stack<T>();
             }
 
-            void enqueue(T data) throw(QueueOverflowException) {
+            void enqueue(T data) throw(QueueOverflowException, QueueUnderflowException) {
                 if (isFull()) {
                     throw QueueOverflowException();
                 }
 
-                while (!mReverseStack.isEmpty()) {
-                    mForwardStack.push(mReverseStack.pop());
+                try {
+                    while (!mReverseStack.isEmpty()) {
+                        mForwardStack.push(mReverseStack.pop());
+                    }
+                    mForwardStack.push(data);
+                } catch (StackOverflowException e) {
+                    throw QueueOverflowException();
+                } catch (StackUnderflowException e) {
+                    throw QueueUnderflowException();
                 }
-                mForwardStack.push(data);
             }
 
-            T dequeue() throw(QueueUnderflowException) {
+            T dequeue() throw(QueueOverflowException, QueueUnderflowException) {
                 if (isEmpty()) {
                     throw QueueUnderflowException();
                 }
 
-                while (!mForwardStack.isEmpty()) {
-                    mReverseStack.push(mForwardStack.pop());
+                try {
+                    while (!mForwardStack.isEmpty()) {
+                        mReverseStack.push(mForwardStack.pop());
+                    }
+                    return mReverseStack.pop();
+                } catch (StackOverflowException e) {
+                    throw QueueOverflowException();
+                } catch (StackUnderflowException e) {
+                    throw QueueUnderflowException();
                 }
-                return mReverseStack.pop();
             }
 
             bool isEmpty() {
