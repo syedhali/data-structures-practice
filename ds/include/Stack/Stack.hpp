@@ -15,6 +15,16 @@ namespace ds {
 
         const int STACK_MAX_SIZE = 40;
 
+        class StackOverflowException : std::runtime_error {
+        public:
+            StackOverflowException() : runtime_error("Stack overflow") {}
+        };
+
+        class StackUnderflowException : std::runtime_error {
+        public:
+            StackUnderflowException() : runtime_error("Stack underflow") {}
+        };
+
         template<class T>
         class Node {
         private:
@@ -58,16 +68,6 @@ namespace ds {
                 return ss.str();
             }
 
-        };
-
-        class StackOverflowException : std::runtime_error {
-        public:
-            StackOverflowException() : runtime_error("Stack overflow") {}
-        };
-
-        class StackUnderflowException : std::runtime_error {
-        public:
-            StackUnderflowException() : runtime_error("Stack underflow") {}
         };
 
         template<class T>
