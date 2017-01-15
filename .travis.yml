@@ -45,6 +45,5 @@ matrix:
 script:
   - mkdir builds
   - cd builds
-  - cmake ..
-  - make
+  - cmake -DCMAKE_CXX_COMPILER=$COMPILER .. && make
   - ./data_structures_practice
