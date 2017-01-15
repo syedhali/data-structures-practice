@@ -27,5 +27,5 @@ compiler:
 script:
   - mkdir builds
   - cd builds
-  - cmake -DCMAKE_CXX_COMPILER=$COMPILER .. && make
+  - cmake .. && make
   - ./data_structures_practice
