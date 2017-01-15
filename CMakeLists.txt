@@ -15,7 +15,8 @@ set(GOOGLE_TEST_HEADER_DIRS
         ${GOOGLE_TEST_DIR}/googlemock/include)
 add_subdirectory(${GOOGLE_TEST_DIR})
 
-set(SOURCE_FILES gtest-stack-tests.cpp gtest-binary-tree-tests.cpp gtest-stack-expression-validator-tests.cpp gtest-stack-minimum-tests.cpp gtest-queue-tests.cpp gtest-queue-circular-tests.cpp gtest-queue-stack-tests.cpp)
+file(GLOB_RECURSE TESTS_SRC tests/*.cpp)
+set(SOURCE_FILES ${TESTS_SRC})
 add_executable(data_structures_practice ${SOURCE_FILES})
 target_link_libraries(data_structures_practice ds gtest gtest_main)
 include_directories(
