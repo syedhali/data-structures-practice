@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.7)
 project(ds CXX)
 
-set(CMAKE_CXX_STANDARD 11)
+add_definitions("-std=c++11")
 
 file(GLOB_RECURSE DS_SRC
         src/*.cpp
