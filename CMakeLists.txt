@@ -15,6 +15,7 @@ set(GOOGLE_TEST_HEADER_DIRS
         ${GOOGLE_TEST_DIR}/googlemock/include)
 add_subdirectory(${GOOGLE_TEST_DIR})
 
+# tests
 file(GLOB_RECURSE TESTS_SRC tests/*.cpp)
 set(SOURCE_FILES ${TESTS_SRC})
 add_executable(data_structures_practice ${SOURCE_FILES})
