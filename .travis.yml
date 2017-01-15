@@ -1,12 +1,11 @@
 language:
    - cpp
-
-install:
-   - sudo apt-get install libgtest-dev
-
+os:
+  - linux
+  - osx
 script:
-    - mkdir builds
-    - cd builds
-    - cmake -GNinja ..
-    - ninja
-    - ./data_structures_practice
+  - mkdir builds
+  - cd builds  
+  - cmake -GNinja ..
+  - ninja
+  - ./data_structures_practice
