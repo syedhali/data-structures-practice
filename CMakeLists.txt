@@ -9,7 +9,7 @@ set(DS_HEADER_DIR ${DS_DIR}/include)
 add_subdirectory(${DS_DIR})
 
 # googletest
-set(GOOGLE_TEST_DIR googletest)
+set(GOOGLE_TEST_DIR deps/googletest)
 set(GOOGLE_TEST_HEADER_DIRS
         ${GOOGLE_TEST_DIR}/googletest/include
         ${GOOGLE_TEST_DIR}/googlemock/include)
