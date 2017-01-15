@@ -3,7 +3,7 @@
 //
 
 #include <gtest/gtest.h>
-#include "Queue/CircularQueue.h"
+#include "Queue/CircularQueue.hpp"
 
 using namespace ds::queue;
 

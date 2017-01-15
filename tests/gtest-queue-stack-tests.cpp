@@ -3,7 +3,7 @@
 //
 
 #include <gtest/gtest.h>
-#include "Queue/StackQueue.h"
+#include "Queue/StackQueue.hpp"
 
 using namespace ds::queue;
 

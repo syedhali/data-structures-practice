@@ -3,7 +3,7 @@
 //
 
 #include <gtest/gtest.h>
-#include "Stack/MinimumStack.h"
+#include "Stack/MinimumStack.hpp"
 
 using namespace ds::stack;
 

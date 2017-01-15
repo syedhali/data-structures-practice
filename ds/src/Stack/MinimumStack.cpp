@@ -2,7 +2,7 @@
 // Created by Syed Haris Ali on 1/13/17.
 //
 
-#include "Stack/MinimumStack.h"
+#include "Stack/MinimumStack.hpp"
 
 namespace ds {
 
