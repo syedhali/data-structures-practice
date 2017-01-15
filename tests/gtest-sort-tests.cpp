@@ -23,19 +23,36 @@ protected:
         mUnsortedList.push_back(4);
         mUnsortedList.push_back(7);
         mUnsortedList.push_back(6);
+        mUnsortedList.push_back(8);
+        mUnsortedList.push_back(2);
+        mUnsortedList.push_back(4);
+        mUnsortedList.push_back(7);
+        mUnsortedList.push_back(6);
+        mUnsortedList.push_back(100);
+        mUnsortedList.push_back(55);
+        mUnsortedList.push_back(3);
+        mUnsortedList.push_back(7);
+        mUnsortedList.push_back(6);
     }
 };
 
 TEST_F(SortTest, SelectionSortTest) {
     SelectionSort(mUnsortedList);
     for (int i = 0; i < mUnsortedList.size() - 1; ++i) {
-        ASSERT_TRUE(mUnsortedList[i] < mUnsortedList[i + 1]);
+        ASSERT_TRUE(mUnsortedList[i] <= mUnsortedList[i + 1]);
     }
 }
 
 TEST_F(SortTest, BubbleSortTest) {
     BubbleSort(mUnsortedList);
     for (int i = 0; i < mUnsortedList.size() - 1; ++i) {
-        ASSERT_TRUE(mUnsortedList[i] < mUnsortedList[i + 1]);
+        ASSERT_TRUE(mUnsortedList[i] <= mUnsortedList[i + 1]);
+    }
+}
+
+TEST_F(SortTest, InsertionSortTest) {
+    InsertionSort(mUnsortedList);
+    for (int i = 0; i < mUnsortedList.size() - 1; ++i) {
+        ASSERT_TRUE(mUnsortedList[i] <= mUnsortedList[i + 1]);
     }
 }
