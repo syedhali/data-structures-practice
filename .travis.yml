@@ -6,6 +6,6 @@ os:
 script:
   - mkdir builds
   - cd builds  
-  - cmake -GNinja ..
-  - ninja
+  - cmake ..
+  - make
   - ./data_structures_practice
