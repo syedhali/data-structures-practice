@@ -56,3 +56,10 @@ TEST_F(SortTest, InsertionSortTest) {
         ASSERT_TRUE(mUnsortedList[i] <= mUnsortedList[i + 1]);
     }
 }
+
+TEST_F(SortTest, ShellSortTest) {
+    ShellSort(mUnsortedList);
+    for (int i = 0; i < mUnsortedList.size() - 1; ++i) {
+        ASSERT_TRUE(mUnsortedList[i] <= mUnsortedList[i + 1]);
+    }
+}
