@@ -10,6 +10,9 @@
 namespace ds {
     namespace sort {
 
+        //
+        // Simply prints out a list with an identifier to help denote where the print statement is coming from
+        //
         void Print(std::string identifier, std::vector<int> &list);
 
         //
@@ -35,6 +38,12 @@ namespace ds {
         //
         void InsertionSort(std::vector<int> &list);
 
+        //
+        // Complexity:       Between O(N) - O(N^2), depending on increment value chosen
+        // Space Complexity: O(1)
+        // Notes:            Better than Insertion sort because final list is a nearly sorted list
+        //
+        void ShellSort(std::vector<int> &list);
     }
 }
 
