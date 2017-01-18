@@ -104,7 +104,7 @@ namespace ds {
                     mRoot = root;
                 }
 
-                std::vector<Node<T> *>  breadthFirst() {
+                std::vector<Node<T> *> breadthFirstTraversal() {
                     std::vector<Node<T> *> visitedNodes = std::vector<Node<T> *>();
                     if (mRoot == nullptr) {
                         return visitedNodes;
@@ -114,8 +114,6 @@ namespace ds {
                     queue.enqueue(mRoot);
                     while (!queue.isEmpty()) {
                         Node<T> *node = queue.dequeue();
-
-                        std::cout << "bread first: " << node->getString(false) << std::endl;
                         visitedNodes.push_back(node);
 
                         if (node->getLeftChild() != nullptr) {
@@ -128,6 +126,24 @@ namespace ds {
                     }
 
                     return visitedNodes;
+                }
+
+                std::vector<Node<T> *> depthFirstTraversalPreorder() {
+                    std::vector<Node<T> *> visitiedNodes = std::vector<Node<T> *>();
+                    if (mRoot == nullptr) {
+                        return visitiedNodes;
+                    }
+                    depthFirstTraversalPreorder(mRoot, visitiedNodes);
+                    return visitiedNodes;
+                }
+
+                void depthFirstTraversalPreorder(Node<T> *root, std::vector<Node<T> *> &visitedNodes) {
+                    if (root == nullptr) {
+                        return;
+                    }
+                    visitedNodes.push_back(root);
+                    depthFirstTraversalPreorder(root->getLeftChild(), visitedNodes);
+                    depthFirstTraversalPreorder(root->getRightChild(), visitedNodes);
                 }
             };
 

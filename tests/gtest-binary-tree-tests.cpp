@@ -74,12 +74,27 @@ TEST_F(BinaryTreeTest, ChildLeavesAreValid) {
 
 TEST_F(BinaryTreeTest, BreadFirstTraversal) {
     mTree->setRoot(mRootWithChildren);
-    std::vector<Node<std::string> *> visitedNodes = mTree->breadthFirst();
+    std::vector<Node<std::string> *> visitedNodes = mTree->breadthFirstTraversal();
     ASSERT_EQ(visitedNodes[0]->getData(), "A");
     ASSERT_EQ(visitedNodes[1]->getData(), "B");
     ASSERT_EQ(visitedNodes[2]->getData(), "C");
     ASSERT_EQ(visitedNodes[3]->getData(), "D");
     ASSERT_EQ(visitedNodes[4]->getData(), "E");
+    ASSERT_EQ(visitedNodes[5]->getData(), "F");
+    ASSERT_EQ(visitedNodes[6]->getData(), "G");
+    ASSERT_EQ(visitedNodes[7]->getData(), "H");
+    ASSERT_EQ(visitedNodes[8]->getData(), "I");
+    ASSERT_EQ(visitedNodes[9]->getData(), "J");
+}
+
+TEST_F(BinaryTreeTest, DepthFirstPreorderTraversal) {
+    mTree->setRoot(mRootWithChildren);
+    std::vector<Node<std::string> *> visitedNodes = mTree->depthFirstTraversalPreorder();
+    ASSERT_EQ(visitedNodes[0]->getData(), "A");
+    ASSERT_EQ(visitedNodes[1]->getData(), "B");
+    ASSERT_EQ(visitedNodes[2]->getData(), "D");
+    ASSERT_EQ(visitedNodes[3]->getData(), "E");
+    ASSERT_EQ(visitedNodes[4]->getData(), "C");
     ASSERT_EQ(visitedNodes[5]->getData(), "F");
     ASSERT_EQ(visitedNodes[6]->getData(), "G");
     ASSERT_EQ(visitedNodes[7]->getData(), "H");
