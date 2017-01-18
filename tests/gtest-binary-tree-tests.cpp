@@ -101,3 +101,18 @@ TEST_F(BinaryTreeTest, DepthFirstPreorderTraversal) {
     ASSERT_EQ(visitedNodes[8]->getData(), "I");
     ASSERT_EQ(visitedNodes[9]->getData(), "J");
 }
+
+TEST_F(BinaryTreeTest, DepthFirstInorderTraversal) {
+    mTree->setRoot(mRootWithChildren);
+    std::vector<Node<std::string> *> visitedNodes = mTree->depthFirstTraversalInorder();
+    ASSERT_EQ(visitedNodes[0]->getData(), "D");
+    ASSERT_EQ(visitedNodes[1]->getData(), "B");
+    ASSERT_EQ(visitedNodes[2]->getData(), "E");
+    ASSERT_EQ(visitedNodes[3]->getData(), "A");
+    ASSERT_EQ(visitedNodes[4]->getData(), "F");
+    ASSERT_EQ(visitedNodes[5]->getData(), "C");
+    ASSERT_EQ(visitedNodes[6]->getData(), "I");
+    ASSERT_EQ(visitedNodes[7]->getData(), "H");
+    ASSERT_EQ(visitedNodes[8]->getData(), "J");
+    ASSERT_EQ(visitedNodes[9]->getData(), "G");
+}

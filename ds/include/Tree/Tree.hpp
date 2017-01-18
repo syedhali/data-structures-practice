@@ -92,6 +92,25 @@ namespace ds {
             private:
                 Node<T> *mRoot = nullptr;
 
+            protected:
+                void depthFirstTraversalPreorder(Node<T> *root, std::vector<Node<T> *> &visitedNodes) {
+                    if (root == nullptr) {
+                        return;
+                    }
+                    visitedNodes.push_back(root);
+                    depthFirstTraversalPreorder(root->getLeftChild(), visitedNodes);
+                    depthFirstTraversalPreorder(root->getRightChild(), visitedNodes);
+                }
+
+                void depthFirstTraversalInorder(Node<T> *root, std::vector<Node<T> *> &visitedNodes) {
+                    if (root == nullptr) {
+                        return;
+                    }
+                    depthFirstTraversalInorder(root->getLeftChild(), visitedNodes);
+                    visitedNodes.push_back(root);
+                    depthFirstTraversalInorder(root->getRightChild(), visitedNodes);
+                }
+
             public:
                 Tree(Node<T> *root) : mRoot(root) {}
                 ~Tree() {}
@@ -137,14 +156,15 @@ namespace ds {
                     return visitiedNodes;
                 }
 
-                void depthFirstTraversalPreorder(Node<T> *root, std::vector<Node<T> *> &visitedNodes) {
-                    if (root == nullptr) {
-                        return;
+                std::vector<Node<T> *> depthFirstTraversalInorder() {
+                    std::vector<Node<T> *> visitiedNodes = std::vector<Node<T> *>();
+                    if (mRoot == nullptr) {
+                        return visitiedNodes;
                     }
-                    visitedNodes.push_back(root);
-                    depthFirstTraversalPreorder(root->getLeftChild(), visitedNodes);
-                    depthFirstTraversalPreorder(root->getRightChild(), visitedNodes);
+                    depthFirstTraversalInorder(mRoot, visitiedNodes);
+                    return visitiedNodes;
                 }
+
             };
 
         }
