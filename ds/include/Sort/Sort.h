@@ -44,6 +44,15 @@ namespace ds {
         // Notes:            Better than Insertion sort because final list is a nearly sorted list
         //
         void ShellSort(std::vector<int> &list);
+
+        //
+        // Complexity:       O(N^2)
+        // Space Complexity: O(1)
+        // Notes:            Useful for faster, divide and conquer algorithms
+        //                   Better than bubble sort because it can break early on each iteration to the sorted list
+        //                   Uses less RAM than bubble sort because there are fewer swaps occurring
+        //
+        void MergeSort(std::vector<int> &list);
     }
 }
 

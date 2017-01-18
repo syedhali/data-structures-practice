@@ -63,3 +63,10 @@ TEST_F(SortTest, ShellSortTest) {
         ASSERT_TRUE(mUnsortedList[i] <= mUnsortedList[i + 1]);
     }
 }
+
+TEST_F(SortTest, MergeSortTest) {
+    MergeSort(mUnsortedList);
+    for (int i = 0; i < mUnsortedList.size() - 1; ++i) {
+        ASSERT_TRUE(mUnsortedList[i] <= mUnsortedList[i + 1]);
+    }
+}
