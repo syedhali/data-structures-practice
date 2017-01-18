@@ -68,21 +68,17 @@ namespace ds {
                 std::string getString() {
                     std::stringstream ss;
                     ss << std::endl << "Node (" << getData() << ") { " << std::endl;
-
                     if (mLeftChild != nullptr) {
                         ss << "leftChild: " << mLeftChild->getString();
                     } else {
                         ss << "leftChild: null" << std::endl;
                     }
-
                     if (mRightChild != nullptr) {
                         ss << "rightChild: " << mRightChild->getString();
                     } else {
                         ss << "rightChild: null" << std::endl;
                     }
-
                     ss << "}" << std::endl;
-
                     return ss.str();
                 }
             };
