@@ -24,6 +24,12 @@ protected:
         if (mTree != nullptr) {
             delete mTree;
         }
+        if (mRoot != nullptr) {
+            delete mRoot;
+        }
+        if (mRootWithChildren != nullptr) {
+            delete mRootWithChildren;
+        }
     }
 
 public:

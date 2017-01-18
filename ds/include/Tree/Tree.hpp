@@ -94,12 +94,7 @@ namespace ds {
 
             public:
                 Tree(Node<T> *root) : mRoot(root) {}
-
-                ~Tree() {
-                    if (mRoot != nullptr) {
-                        delete mRoot;
-                    }
-                }
+                ~Tree() {}
 
                 Node<T> *getRoot() const {
                     return mRoot;
