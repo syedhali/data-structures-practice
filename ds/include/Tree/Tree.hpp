@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <sstream>
+#include "Queue/CircularQueue.hpp"
 
 namespace ds {
     namespace tree {
@@ -65,20 +66,23 @@ namespace ds {
                     mRightChild = rightChild;
                 }
 
-                std::string getString() {
+                std::string getString(bool includeChildren) {
                     std::stringstream ss;
-                    ss << std::endl << "Node (" << getData() << ") { " << std::endl;
-                    if (mLeftChild != nullptr) {
-                        ss << "leftChild: " << mLeftChild->getString();
-                    } else {
-                        ss << "leftChild: null" << std::endl;
+                    ss << "Node (" << getData() << ")";
+                    if (includeChildren) {
+                        ss << " { " << std::endl;
+                        if (mLeftChild != nullptr) {
+                            ss << "leftChild: " << mLeftChild->getString(includeChildren);
+                        } else {
+                            ss << "leftChild: null" << std::endl;
+                        }
+                        if (mRightChild != nullptr) {
+                            ss << "rightChild: " << mRightChild->getString(includeChildren);
+                        } else {
+                            ss << "rightChild: null" << std::endl;
+                        }
+                        ss << "}" << std::endl;
                     }
-                    if (mRightChild != nullptr) {
-                        ss << "rightChild: " << mRightChild->getString();
-                    } else {
-                        ss << "rightChild: null" << std::endl;
-                    }
-                    ss << "}" << std::endl;
                     return ss.str();
                 }
             };
@@ -103,6 +107,32 @@ namespace ds {
 
                 void setRoot(Node<T> *root) {
                     mRoot = root;
+                }
+
+                std::vector<Node<T> *>  breadthFirst() {
+                    std::vector<Node<T> *> visitedNodes = std::vector<Node<T> *>();
+                    if (mRoot == nullptr) {
+                        return visitedNodes;
+                    }
+
+                    queue::CircularQueue<Node<T> *> queue = queue::CircularQueue<Node<T> *>();
+                    queue.enqueue(mRoot);
+                    while (!queue.isEmpty()) {
+                        Node<T> *node = queue.dequeue();
+
+                        std::cout << "bread first: " << node->getString(false) << std::endl;
+                        visitedNodes.push_back(node);
+
+                        if (node->getLeftChild() != nullptr) {
+                            queue.enqueue(node->getLeftChild());
+                        }
+
+                        if (node->getRightChild() != nullptr) {
+                            queue.enqueue(node->getRightChild());
+                        }
+                    }
+
+                    return visitedNodes;
                 }
             };
 
