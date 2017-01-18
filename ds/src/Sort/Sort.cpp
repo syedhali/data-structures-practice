@@ -81,6 +81,27 @@ namespace ds {
                 increment /= 2;
             }
         }
+
+        namespace merge {
+
+            void Split(std::vector<int> &list, std::vector<int> &left, std::vector<int> &right) {
+                int size = (int)list.size();
+                int half = size / 2;
+                for (int i = 0; i + half < size; ++i) {
+                    left[i] = list[i];
+                    right[i] = list[i + half];
+                }
+            }
+
+            void Merge(std::vector<int> &list, std::vector<int> &left, std::vector<int> &right) {
+
+            }
+
+        }
+
+        void MergeSort(std::vector<int> &list) {
+            std::cout << "Int test: " << 5/2 << std::endl;
+        }
     }
 
 }
