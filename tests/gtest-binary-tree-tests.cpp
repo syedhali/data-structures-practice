@@ -131,3 +131,19 @@ TEST_F(BinaryTreeTest, DepthFirstPostorderTraversal) {
     ASSERT_EQ(visitedNodes[8]->getData(), "C");
     ASSERT_EQ(visitedNodes[9]->getData(), "A");
 }
+
+TEST_F(BinaryTreeTest, MirrorWiithBreadthFirstTraversal) {
+    mTree->setRoot(mRootWithChildren);
+    mTree->mirror();
+    std::vector<Node<std::string> *> visitedNodes = mTree->breadthFirstTraversal();
+    ASSERT_EQ(visitedNodes[0]->getData(), "A");
+    ASSERT_EQ(visitedNodes[1]->getData(), "C");
+    ASSERT_EQ(visitedNodes[2]->getData(), "B");
+    ASSERT_EQ(visitedNodes[3]->getData(), "G");
+    ASSERT_EQ(visitedNodes[4]->getData(), "F");
+    ASSERT_EQ(visitedNodes[5]->getData(), "E");
+    ASSERT_EQ(visitedNodes[6]->getData(), "D");
+    ASSERT_EQ(visitedNodes[7]->getData(), "H");
+    ASSERT_EQ(visitedNodes[8]->getData(), "J");
+    ASSERT_EQ(visitedNodes[9]->getData(), "I");
+}

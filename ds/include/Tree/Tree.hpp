@@ -41,7 +41,6 @@ namespace ds {
                     }
                 }
 
-            public:
                 T getData() const {
                     return mData;
                 }
@@ -120,6 +119,23 @@ namespace ds {
                     visitedNodes.push_back(root);
                 }
 
+                void mirror(Node<T> *head) {
+                    if (head == nullptr) {
+                        return;
+                    }
+
+                    if (head->getLeftChild() == nullptr && head->getRightChild() == nullptr) {
+                        return;
+                    }
+
+                    Node<T> *temp = head->getLeftChild();
+                    head->setLeftChild(head->getRightChild());
+                    head->setRightChild(temp);
+
+                    mirror(head->getLeftChild());
+                    mirror(head->getRightChild());
+                }
+
             public:
                 Tree(Node<T> *root) : mRoot(root) {}
                 ~Tree() {}
@@ -181,6 +197,10 @@ namespace ds {
                     }
                     depthFirstTraversalPostorder(mRoot, visitiedNodes);
                     return visitiedNodes;
+                }
+
+                void mirror() {
+                    mirror(mRoot);
                 }
             };
 

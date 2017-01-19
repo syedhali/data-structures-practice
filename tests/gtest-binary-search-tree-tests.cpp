@@ -62,3 +62,27 @@ TEST_F(BinarySearchTreeTest, LookupDoesNotExist) {
     Node<int> *node = mTree->lookup(1111);
     ASSERT_FALSE(node != nullptr);
 }
+
+TEST_F(BinarySearchTreeTest, Minimum) {
+    int min = mTree->minimumValue();
+    ASSERT_TRUE(min != MINIMUM_VALUE_NOT_FOUND);
+    ASSERT_EQ(min, 0);
+}
+
+TEST_F(BinarySearchTreeTest, Minimum2) {
+    mTree->insert(new Node<int>(-1));
+    int min = mTree->minimumValue();
+    ASSERT_TRUE(min != MINIMUM_VALUE_NOT_FOUND);
+    ASSERT_EQ(min, -1);
+}
+
+TEST_F(BinarySearchTreeTest, MinimumNotFound) {
+    mTree->setRoot(nullptr);
+    int min = mTree->minimumValue();
+    ASSERT_TRUE(min == MINIMUM_VALUE_NOT_FOUND);
+}
+
+TEST_F(BinarySearchTreeTest, MaximumDepth) {
+    int maxDepth = mTree->maximumDepth();
+    ASSERT_EQ(maxDepth, 3);
+}

@@ -11,15 +11,11 @@ namespace ds {
                 if (head == nullptr) {
                     return node;
                 }
-
                 if (node->getData() <= head->getData()) {
                     head->setLeftChild(insert(head->getLeftChild(), node));
                 } else {
                     head->setRightChild(insert(head->getRightChild(), node));
                 }
-
-                std::cout << "head: " << head->getString(false) << std::endl;
-
                 return head;
             }
 
@@ -40,6 +36,33 @@ namespace ds {
                 }
             }
 
+            int SearchTree::minimumValue(Node<int> *head) {
+                if (head == nullptr) {
+                    return MINIMUM_VALUE_NOT_FOUND;
+                }
+
+                if (head->getLeftChild() != nullptr) {
+                    return minimumValue(head->getLeftChild());
+                }
+
+                return head->getData();
+            }
+
+            int SearchTree::maximumDepth(Node<int> *head) {
+                if (head == nullptr) {
+                    return 0;
+                }
+
+                if (head->getLeftChild() == nullptr && head->getRightChild() == nullptr) {
+                    return 0;
+                }
+
+                int left = maximumDepth(head->getLeftChild()) + 1;
+                int right = maximumDepth(head->getRightChild()) + 1;
+
+                return std::max(left, right);
+            }
+
             Node<int> *SearchTree::getRoot() {
                 return mRoot;
             }
@@ -56,6 +79,16 @@ namespace ds {
             Node<int> *SearchTree::lookup(int data) {
                 Node<int> *head = mRoot;
                 return lookup(head, data);
+            }
+
+            int SearchTree::minimumValue() {
+                Node<int> *head = mRoot;
+                return minimumValue(head);
+            }
+
+            int SearchTree::maximumDepth() {
+                Node<int> *head = mRoot;
+                return maximumDepth(head);
             }
         }
     }
