@@ -24,6 +24,8 @@ namespace ds {
                 void nodesInRange(int low, int high, Node<int> *head, std::vector<Node<int> *> &validNodes);
 
             public:
+                static bool isBinarySearchTree(Node<int> *root);
+
                 Node<int> *getRoot();
                 void setRoot(Node<int> *root);
                 Node<int> *insert(Node<int> *node);

@@ -101,3 +101,49 @@ TEST_F(BinarySearchTreeTest, NodesInRangeEdgeCase2) {
     std::vector<Node<int> *> nodes = mTree->nodesInRange(13, 20);
     ASSERT_EQ(nodes.size(), 0);
 }
+
+TEST_F(BinarySearchTreeTest, IsBinaryTreeSearchTree) {
+    bool isSearchTree = SearchTree::isBinarySearchTree(mRootWithChildren);
+    ASSERT_TRUE(isSearchTree);
+}
+
+TEST_F(BinarySearchTreeTest, IsBinaryTreeSearchTree2) {
+    bool isSearchTree = SearchTree::isBinarySearchTree(nullptr);
+    ASSERT_TRUE(isSearchTree);
+}
+
+TEST_F(BinarySearchTreeTest, IsBinaryTreeSearchTree3) {
+    Node<int> *root = new Node<int>(5);
+    bool isSearchTree = SearchTree::isBinarySearchTree(root);
+    ASSERT_TRUE(isSearchTree);
+}
+
+TEST_F(BinarySearchTreeTest, IsNotBinaryTreeSearchTree) {
+    Node<int> *root = new Node<int>(5);
+    Node<int> *left = new Node<int>(8);
+    Node<int> *right = new Node<int>(10);
+    root->setLeftChild(left);
+    root->setRightChild(right);
+    bool isSearchTree = SearchTree::isBinarySearchTree(root);
+    ASSERT_FALSE(isSearchTree);
+}
+
+TEST_F(BinarySearchTreeTest, IsNotBinaryTreeSearchTree2) {
+    Node<int> *root = new Node<int>(5);
+    Node<int> *left = new Node<int>(2);
+    Node<int> *right = new Node<int>(4);
+    root->setLeftChild(left);
+    root->setRightChild(right);
+    bool isSearchTree = SearchTree::isBinarySearchTree(root);
+    ASSERT_FALSE(isSearchTree);
+}
+
+TEST_F(BinarySearchTreeTest, IsNotBinaryTreeSearchTree3) {
+    Node<int> *root = new Node<int>(5);
+    Node<int> *left = new Node<int>(5);
+    Node<int> *right = new Node<int>(5);
+    root->setLeftChild(left);
+    root->setRightChild(right);
+    bool isSearchTree = SearchTree::isBinarySearchTree(root);
+    ASSERT_FALSE(isSearchTree);
+}

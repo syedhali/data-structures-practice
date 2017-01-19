@@ -7,6 +7,23 @@
 namespace ds {
     namespace tree {
         namespace binary {
+            bool SearchTree::isBinarySearchTree(Node<int> *root) {
+                if (root == nullptr) {
+                    return true;
+                }
+
+                if (root->getLeftChild() == nullptr && root->getRightChild() == nullptr) {
+                    return true;
+                }
+
+                if ((root->getLeftChild()->getData() < root->getData()) &&
+                    root->getRightChild()->getData() > root->getData()) {
+                    return isBinarySearchTree(root->getLeftChild()) && isBinarySearchTree(root->getRightChild());
+                }
+
+                return false;
+            }
+
             Node<int> *SearchTree::insert(Node<int> *head, Node<int> *node) {
                 if (head == nullptr) {
                     return node;
