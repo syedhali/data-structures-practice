@@ -155,6 +155,52 @@ namespace ds {
                     return sum;
                 }
 
+                static bool doesPathExistEqualToSum(int sum, Node<int> *root) {
+                    if (sum < 0) {
+                        return false;
+                    }
+
+                    if (root == nullptr) {
+                        return sum == 0;
+                    }
+
+                    if (root->getLeftChild() == nullptr && root->getRightChild() == nullptr) {
+                        return sum == root->getData();
+                    }
+
+                    if (root->getLeftChild() != nullptr) {
+                        bool hasPathSum = doesPathExistEqualToSum(sum - root->getData(), root->getLeftChild());
+                        if (hasPathSum) {
+                            return true;
+                        }
+                    }
+
+                    if (root->getRightChild() != nullptr) {
+                        bool hasPathSum = doesPathExistEqualToSum(sum - root->getData(), root->getRightChild());
+                        if (hasPathSum) {
+                            return true;
+                        }
+                    }
+
+                    return false;
+                }
+
+                static void printPaths(Node<T> *root, std::vector<Node<T> *> &pathList, std::vector<std::vector<Node<T> *>> &allLists) {
+                    if (!root) {
+                        return;
+                    }
+
+                    pathList.push_back(root);
+                    printPaths(root->getLeftChild(), pathList, allLists);
+                    printPaths(root->getRightChild(), pathList, allLists);
+
+                    if (!root->getLeftChild() && !root->getRightChild()) {
+                        allLists.push_back(pathList);
+                    }
+
+                    pathList.pop_back();
+                }
+
                 Node<T> *getRoot() const {
                     return mRoot;
                 }

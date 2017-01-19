@@ -161,3 +161,43 @@ TEST_F(BinaryTreeTest, UniqueTreesForNNodes) {
     ASSERT_EQ(Tree<int>::countTrees(9), 4862);
     ASSERT_EQ(Tree<int>::countTrees(10), 16796);
 }
+
+TEST_F(BinaryTreeTest, DoesPathExistEqualToSum) {
+    Node<int> *node1 = new Node<int>(1);
+    Node<int> *node3 = new Node<int>(3);
+    Node<int> *node5 = new Node<int>(5);
+    Node<int> *node7 = new Node<int>(7);
+    Node<int> *node9 = new Node<int>(9);
+    node1->setLeftChild(node3);
+    node1->setRightChild(node5);
+    node5->setLeftChild(node7);
+    node5->setRightChild(node9);
+    ASSERT_TRUE(Tree<int>::doesPathExistEqualToSum(4, node1));
+    ASSERT_TRUE(Tree<int>::doesPathExistEqualToSum(13, node1));
+    ASSERT_TRUE(Tree<int>::doesPathExistEqualToSum(15, node1));
+    ASSERT_FALSE(Tree<int>::doesPathExistEqualToSum(0, node1));
+    ASSERT_FALSE(Tree<int>::doesPathExistEqualToSum(-1, node1));
+    ASSERT_FALSE(Tree<int>::doesPathExistEqualToSum(20, node1));
+}
+
+TEST_F(BinaryTreeTest, PrintAllPaths) {
+    mTree->setRoot(mRootWithChildren);
+    std::vector<std::vector<Node<std::string> *>> allLists = std::vector<std::vector<Node<std::string> *>>();
+    std::vector<Node<std::string> *> pathList = std::vector<Node<std::string> *>();
+    Tree<std::string>::printPaths(mTree->getRoot(), pathList, allLists);
+    ASSERT_EQ(allLists.size(), 5);
+}
+
+TEST_F(BinaryTreeTest, PrintAllPaths2) {
+    std::vector<std::vector<Node<std::string> *>> allLists = std::vector<std::vector<Node<std::string> *>>();
+    std::vector<Node<std::string> *> pathList = std::vector<Node<std::string> *>();
+    Tree<std::string>::printPaths(mTree->getRoot(), pathList, allLists);
+    ASSERT_EQ(allLists.size(), 1);
+}
+
+TEST_F(BinaryTreeTest, PrintAllPathsNull) {
+    std::vector<std::vector<Node<std::string> *>> allLists = std::vector<std::vector<Node<std::string> *>>();
+    std::vector<Node<std::string> *> pathList = std::vector<Node<std::string> *>();
+    Tree<std::string>::printPaths(nullptr, pathList, allLists);
+    ASSERT_EQ(allLists.size(), 0);
+}
