@@ -86,3 +86,18 @@ TEST_F(BinarySearchTreeTest, MaximumDepth) {
     int maxDepth = mTree->maximumDepth();
     ASSERT_EQ(maxDepth, 3);
 }
+
+TEST_F(BinarySearchTreeTest, NodesInRange) {
+    std::vector<Node<int> *> nodes = mTree->nodesInRange(2, 10);
+    ASSERT_EQ(nodes.size(), 5);
+}
+
+TEST_F(BinarySearchTreeTest, NodesInRangeEdgeCase) {
+    std::vector<Node<int> *> nodes = mTree->nodesInRange(0, 0);
+    ASSERT_EQ(nodes.size(), 1);
+}
+
+TEST_F(BinarySearchTreeTest, NodesInRangeEdgeCase2) {
+    std::vector<Node<int> *> nodes = mTree->nodesInRange(13, 20);
+    ASSERT_EQ(nodes.size(), 0);
+}

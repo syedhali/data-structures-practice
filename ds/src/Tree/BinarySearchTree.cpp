@@ -63,6 +63,24 @@ namespace ds {
                 return std::max(left, right);
             }
 
+            void SearchTree::nodesInRange(int low, int high, Node<int> *head, std::vector<Node<int> *> &validNodes) {
+                if (head == nullptr) {
+                    return;
+                }
+
+                if (head->getData() >= low && head->getData() <= high) {
+                    validNodes.push_back(head);
+                }
+
+                if (head->getData() > low) {
+                    nodesInRange(low, high, head->getLeftChild(), validNodes);
+                }
+
+                if (head->getData() < high) {
+                    nodesInRange(low, high, head->getRightChild(), validNodes);
+                }
+            }
+
             Node<int> *SearchTree::getRoot() {
                 return mRoot;
             }
@@ -89,6 +107,13 @@ namespace ds {
             int SearchTree::maximumDepth() {
                 Node<int> *head = mRoot;
                 return maximumDepth(head);
+            }
+
+            std::vector<Node<int> *> SearchTree::nodesInRange(int low, int high) {
+                Node<int> *head = mRoot;
+                std::vector<Node<int> *> validNodes = std::vector<Node<int> *>();
+                nodesInRange(low, high, head, validNodes);
+                return validNodes;
             }
         }
     }

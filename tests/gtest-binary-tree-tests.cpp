@@ -147,3 +147,17 @@ TEST_F(BinaryTreeTest, MirrorWiithBreadthFirstTraversal) {
     ASSERT_EQ(visitedNodes[8]->getData(), "J");
     ASSERT_EQ(visitedNodes[9]->getData(), "I");
 }
+
+TEST_F(BinaryTreeTest, UniqueTreesForNNodes) {
+    ASSERT_EQ(Tree<int>::countTrees(0), 1);
+    ASSERT_EQ(Tree<int>::countTrees(1), 1);
+    ASSERT_EQ(Tree<int>::countTrees(2), 2);
+    ASSERT_EQ(Tree<int>::countTrees(3), 5);
+    ASSERT_EQ(Tree<int>::countTrees(4), 14);
+    ASSERT_EQ(Tree<int>::countTrees(5), 42);
+    ASSERT_EQ(Tree<int>::countTrees(6), 132);
+    ASSERT_EQ(Tree<int>::countTrees(7), 429);
+    ASSERT_EQ(Tree<int>::countTrees(8), 1430);
+    ASSERT_EQ(Tree<int>::countTrees(9), 4862);
+    ASSERT_EQ(Tree<int>::countTrees(10), 16796);
+}
