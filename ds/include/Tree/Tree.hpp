@@ -111,6 +111,15 @@ namespace ds {
                     depthFirstTraversalInorder(root->getRightChild(), visitedNodes);
                 }
 
+                void depthFirstTraversalPostorder(Node<T> *root, std::vector<Node<T> *> &visitedNodes) {
+                    if (root == nullptr) {
+                        return;
+                    }
+                    depthFirstTraversalPostorder(root->getLeftChild(), visitedNodes);
+                    depthFirstTraversalPostorder(root->getRightChild(), visitedNodes);
+                    visitedNodes.push_back(root);
+                }
+
             public:
                 Tree(Node<T> *root) : mRoot(root) {}
                 ~Tree() {}
@@ -165,6 +174,14 @@ namespace ds {
                     return visitiedNodes;
                 }
 
+                std::vector<Node<T> *> depthFirstTraversalPostorder() {
+                    std::vector<Node<T> *> visitiedNodes = std::vector<Node<T> *>();
+                    if (mRoot == nullptr) {
+                        return visitiedNodes;
+                    }
+                    depthFirstTraversalPostorder(mRoot, visitiedNodes);
+                    return visitiedNodes;
+                }
             };
 
         }
