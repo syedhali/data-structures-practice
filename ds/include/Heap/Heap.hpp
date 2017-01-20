@@ -11,6 +11,11 @@ namespace ds {
 
         const int MAX_SIZE = 40;
 
+        class HeapFullException : std::runtime_error {
+        public:
+            HeapFullException() : std::runtime_error("Heap is full") {}
+        };
+
         template<typename T>
         class Heap {
         private:
@@ -19,17 +24,9 @@ namespace ds {
             int mMaxSize = MAX_SIZE;
 
         public:
-            Heap() {
-
-            }
-
-            Heap(int maxSize) : mMaxSize(maxSize) {
-
-            }
-
-            ~Heap() {
-
-            }
+            Heap() {}
+            Heap(int maxSize) : mMaxSize(maxSize) {}
+            ~Heap() {}
 
             T getElementAtIndex(int index) {
                 return mElements[index];
@@ -79,18 +76,28 @@ namespace ds {
 
             virtual void siftDown(int index) {}
             virtual void siftUp(int index) {}
+
+            void insert(T element) throw(HeapFullException) {
+                if (isFull()) {
+                    throw HeapFullException();
+                }
+
+                mElements[mCount] = element;
+                siftUp(mCount);
+                mCount++;
+            }
         };
 
         template<typename T>
         class MinHeap : Heap<T> {
         public:
             virtual void siftDown(int index) override {
-                int leftChildIndex = getLeftChildIndex(index);
-                int rightChildIndex = getRightChildIndex(index);
+                int leftChildIndex = Heap<T>::getLeftChildIndex(index);
+                int rightChildIndex = Heap<T>::getRightChildIndex(index);
 
                 int smallerIndex = -1;
                 if (leftChildIndex != -1 && rightChildIndex != -1) {
-                    smallerIndex = getElementAtIndex(leftChildIndex) < getElementAtIndex(rightChildIndex) ? leftChildIndex : rightChildIndex;
+                    smallerIndex = Heap<T>::getElementAtIndex(leftChildIndex) < Heap<T>::getElementAtIndex(rightChildIndex) ? leftChildIndex : rightChildIndex;
                 }
                 else if (leftChildIndex != -1) {
                     smallerIndex = leftChildIndex;
@@ -103,20 +110,20 @@ namespace ds {
                     return;
                 }
 
-                if (getElementAtIndex(smallerIndex) < getElementAtIndex(index)) {
-                    swap(smallerIndex, index);
+                if (Heap<T>::getElementAtIndex(smallerIndex) < Heap<T>::getElementAtIndex(index)) {
+                    Heap<T>::swap(smallerIndex, index);
                     siftDown(smallerIndex);
                 }
             }
 
             virtual void siftUp(int index) override {
-                int parentIndex = getParentIndex(index);
+                int parentIndex = Heap<T>::getParentIndex(index);
                 if (parentIndex == -1) {
                     return;
                 }
 
-                if (getElementAtIndex(parentIndex) > getElementAtIndex(index)) {
-                    swap(parentIndex, index);
+                if (Heap<T>::getElementAtIndex(parentIndex) > Heap<T>::getElementAtIndex(index)) {
+                    Heap<T>::swap(parentIndex, index);
                     siftUp(parentIndex);
                 }
             }
@@ -126,12 +133,12 @@ namespace ds {
         class MaxHeap : Heap<T> {
         public:
             virtual void siftDown(int index) override {
-                int leftChildIndex = getLeftChildIndex(index);
-                int rightChildIndex = getRightChildIndex(index);
+                int leftChildIndex = Heap<T>::getLeftChildIndex(index);
+                int rightChildIndex = Heap<T>::getRightChildIndex(index);
 
                 int largerIndex = -1;
                 if (leftChildIndex != -1 && rightChildIndex != -1) {
-                    largerIndex = getElementAtIndex(leftChildIndex) > getElementAtIndex(rightChildIndex) ? leftChildIndex : rightChildIndex;
+                    largerIndex = Heap<T>::getElementAtIndex(leftChildIndex) > Heap<T>::getElementAtIndex(rightChildIndex) ? leftChildIndex : rightChildIndex;
                 }
                 else if (leftChildIndex != -1) {
                     largerIndex = leftChildIndex;
@@ -144,20 +151,20 @@ namespace ds {
                     return;
                 }
 
-                if (getElementAtIndex(largerIndex) > getElementAtIndex(index)) {
-                    swap(largerIndex, index);
+                if (Heap<T>::getElementAtIndex(largerIndex) > Heap<T>::getElementAtIndex(index)) {
+                    Heap<T>::swap(largerIndex, index);
                     siftDown(largerIndex);
                 }
             }
 
             virtual void siftUp(int index) override {
-                int parentIndex = getParentIndex(index);
+                int parentIndex = Heap<T>::getParentIndex(index);
                 if (parentIndex == -1) {
                     return;
                 }
 
-                if (getElementAtIndex(parentIndex) < getElementAtIndex(index)) {
-                    swap(parentIndex, index);
+                if (Heap<T>::getElementAtIndex(parentIndex) < Heap<T>::getElementAtIndex(index)) {
+                    Heap<T>::swap(parentIndex, index);
                     siftUp(parentIndex);
                 }
             }
