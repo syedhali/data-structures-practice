@@ -41,7 +41,6 @@ namespace ds {
                     }
                 }
 
-            public:
                 T getData() const {
                     return mData;
                 }
@@ -120,9 +119,110 @@ namespace ds {
                     visitedNodes.push_back(root);
                 }
 
+                void mirror(Node<T> *head) {
+                    if (head == nullptr) {
+                        return;
+                    }
+
+                    if (head->getLeftChild() == nullptr && head->getRightChild() == nullptr) {
+                        return;
+                    }
+
+                    Node<T> *temp = head->getLeftChild();
+                    head->setLeftChild(head->getRightChild());
+                    head->setRightChild(temp);
+
+                    mirror(head->getLeftChild());
+                    mirror(head->getRightChild());
+                }
+
+                Node<T> *leastCommonAncestor(Node<T> *root, Node<T> *a, Node<T> *b) {
+                    if (!root) {
+                        return nullptr;
+                    }
+
+                    if (root == a || root == b) {
+                        return root;
+                    }
+
+                    Node<T> *leftLCA = leastCommonAncestor(root->getLeftChild(), a, b);
+                    Node<T> *rightLCA = leastCommonAncestor(root->getRightChild(), a, b);
+
+                    if (leftLCA && rightLCA) {
+                        return root;
+                    }
+
+                    if (leftLCA) {
+                        return leftLCA;
+                    }
+
+                    return rightLCA;
+                }
+
             public:
                 Tree(Node<T> *root) : mRoot(root) {}
                 ~Tree() {}
+
+                static int countTrees(int numNodes) {
+                    if (numNodes <= 1) {
+                        return 1;
+                    }
+
+                    int sum = 0;
+                    for (int i = 1; i <= numNodes; ++i) {
+                        int countLeftTrees = countTrees(i - 1);
+                        int countRightTrees = countTrees(numNodes - i);
+                        sum = sum + (countLeftTrees * countRightTrees);
+                    }
+
+                    return sum;
+                }
+
+                static bool doesPathExistEqualToSum(int sum, Node<int> *root) {
+                    if (sum < 0) {
+                        return false;
+                    }
+
+                    if (root == nullptr) {
+                        return sum == 0;
+                    }
+
+                    if (root->getLeftChild() == nullptr && root->getRightChild() == nullptr) {
+                        return sum == root->getData();
+                    }
+
+                    if (root->getLeftChild() != nullptr) {
+                        bool hasPathSum = doesPathExistEqualToSum(sum - root->getData(), root->getLeftChild());
+                        if (hasPathSum) {
+                            return true;
+                        }
+                    }
+
+                    if (root->getRightChild() != nullptr) {
+                        bool hasPathSum = doesPathExistEqualToSum(sum - root->getData(), root->getRightChild());
+                        if (hasPathSum) {
+                            return true;
+                        }
+                    }
+
+                    return false;
+                }
+
+                static void printPaths(Node<T> *root, std::vector<Node<T> *> &pathList, std::vector<std::vector<Node<T> *>> &allLists) {
+                    if (!root) {
+                        return;
+                    }
+
+                    pathList.push_back(root);
+                    printPaths(root->getLeftChild(), pathList, allLists);
+                    printPaths(root->getRightChild(), pathList, allLists);
+
+                    if (!root->getLeftChild() && !root->getRightChild()) {
+                        allLists.push_back(pathList);
+                    }
+
+                    pathList.pop_back();
+                }
 
                 Node<T> *getRoot() const {
                     return mRoot;
@@ -181,6 +281,14 @@ namespace ds {
                     }
                     depthFirstTraversalPostorder(mRoot, visitiedNodes);
                     return visitiedNodes;
+                }
+
+                void mirror() {
+                    mirror(mRoot);
+                }
+
+                Node<T> *leastCommonAncestor(Node<T> *a, Node<T> *b) {
+                    return leastCommonAncestor(mRoot, a, b);
                 }
             };
 
