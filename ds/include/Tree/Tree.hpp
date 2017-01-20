@@ -136,6 +136,29 @@ namespace ds {
                     mirror(head->getRightChild());
                 }
 
+                Node<T> *leastCommonAncestor(Node<T> *root, Node<T> *a, Node<T> *b) {
+                    if (!root) {
+                        return nullptr;
+                    }
+
+                    if (root == a || root == b) {
+                        return root;
+                    }
+
+                    Node<T> *leftLCA = leastCommonAncestor(root->getLeftChild(), a, b);
+                    Node<T> *rightLCA = leastCommonAncestor(root->getRightChild(), a, b);
+
+                    if (leftLCA && rightLCA) {
+                        return root;
+                    }
+
+                    if (leftLCA) {
+                        return leftLCA;
+                    }
+
+                    return rightLCA;
+                }
+
             public:
                 Tree(Node<T> *root) : mRoot(root) {}
                 ~Tree() {}
@@ -262,6 +285,10 @@ namespace ds {
 
                 void mirror() {
                     mirror(mRoot);
+                }
+
+                Node<T> *leastCommonAncestor(Node<T> *a, Node<T> *b) {
+                    return leastCommonAncestor(mRoot, a, b);
                 }
             };
 

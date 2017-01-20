@@ -12,6 +12,8 @@ class BinaryTreeTest : public ::testing::Test {
 protected:
     Node<std::string> *mRootWithChildren = nullptr;
     Node<std::string> *mRoot = nullptr;
+    Node<std::string> *mLCANodeA = nullptr;
+    Node<std::string> *mLCANodeB = nullptr;
     Tree<std::string> *mTree = nullptr;
 
     BinaryTreeTest() {
@@ -54,6 +56,8 @@ public:
         nodeH->setLeftChild(nodeI);
         nodeH->setRightChild(nodeJ);
         mRootWithChildren = nodeA;
+        mLCANodeA = nodeH;
+        mLCANodeB = nodeF;
     }
 };
 
@@ -200,4 +204,24 @@ TEST_F(BinaryTreeTest, PrintAllPathsNull) {
     std::vector<Node<std::string> *> pathList = std::vector<Node<std::string> *>();
     Tree<std::string>::printPaths(nullptr, pathList, allLists);
     ASSERT_EQ(allLists.size(), 0);
+}
+
+TEST_F(BinaryTreeTest, LeastCommonAncestor) {
+    mTree->setRoot(mRootWithChildren);
+    Node<std::string> *nodeLCA = mTree->leastCommonAncestor(mLCANodeA, mLCANodeB);
+    ASSERT_TRUE(nodeLCA != nullptr);
+    ASSERT_EQ(nodeLCA->getData(), "C");
+}
+
+TEST_F(BinaryTreeTest, LeastCommonAncestorNull) {
+    mTree->setRoot(nullptr);
+    Node<std::string> *nodeLCA = mTree->leastCommonAncestor(mLCANodeA, mLCANodeB);
+    ASSERT_FALSE(nodeLCA != nullptr);
+}
+
+TEST_F(BinaryTreeTest, LeastCommonAncestorRoot) {
+    mTree->setRoot(mRootWithChildren);
+    Node<std::string> *nodeLCA = mTree->leastCommonAncestor(mRootWithChildren, mLCANodeB);
+    ASSERT_TRUE(nodeLCA != nullptr);
+    ASSERT_EQ(nodeLCA->getData(), "A");
 }
