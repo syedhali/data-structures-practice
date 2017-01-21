@@ -47,6 +47,28 @@ TEST_F(HeapTest, MinHeapInsertion) {
     ASSERT_EQ(mMinHeap.getElementAtIndex(2), 12);
 }
 
+TEST_F(HeapTest, MinHeapRemove) {
+    ASSERT_NO_THROW(mMinHeap.insert(1));
+    ASSERT_NO_THROW(mMinHeap.insert(2));
+    ASSERT_NO_THROW(mMinHeap.insert(3));
+    ASSERT_NO_THROW(mMinHeap.insert(4));
+    ASSERT_NO_THROW(mMinHeap.insert(5));
+    ASSERT_NO_THROW(mMinHeap.insert(6));
+
+    int highestPriorityElement = mMinHeap.removeHighestPriority();
+    ASSERT_EQ(highestPriorityElement, 1);
+    highestPriorityElement = mMinHeap.removeHighestPriority();
+    ASSERT_EQ(highestPriorityElement, 2);
+    highestPriorityElement = mMinHeap.removeHighestPriority();
+    ASSERT_EQ(highestPriorityElement, 3);
+    highestPriorityElement = mMinHeap.removeHighestPriority();
+    ASSERT_EQ(highestPriorityElement, 4);
+    highestPriorityElement = mMinHeap.removeHighestPriority();
+    ASSERT_EQ(highestPriorityElement, 5);
+    highestPriorityElement = mMinHeap.removeHighestPriority();
+    ASSERT_EQ(highestPriorityElement, 6);
+}
+
 TEST_F(HeapTest, MaxHeapEmpty) {
     ASSERT_EQ(mMaxHeap.getCount(), 0);
     ASSERT_EQ(mMaxHeap.getParentIndex(0), -1);
@@ -74,4 +96,26 @@ TEST_F(HeapTest, MaxHeapInsertion) {
     ASSERT_EQ(mMaxHeap.getElementAtIndex(0), 12);
     ASSERT_EQ(mMaxHeap.getElementAtIndex(1), 2);
     ASSERT_EQ(mMaxHeap.getElementAtIndex(2), 10);
+}
+
+TEST_F(HeapTest, MaxHeapRemove) {
+    ASSERT_NO_THROW(mMaxHeap.insert(1));
+    ASSERT_NO_THROW(mMaxHeap.insert(2));
+    ASSERT_NO_THROW(mMaxHeap.insert(3));
+    ASSERT_NO_THROW(mMaxHeap.insert(4));
+    ASSERT_NO_THROW(mMaxHeap.insert(5));
+    ASSERT_NO_THROW(mMaxHeap.insert(6));
+
+    int highestPriorityElement = mMaxHeap.removeHighestPriority();
+    ASSERT_EQ(highestPriorityElement, 6);
+    highestPriorityElement = mMaxHeap.removeHighestPriority();
+    ASSERT_EQ(highestPriorityElement, 5);
+    highestPriorityElement = mMaxHeap.removeHighestPriority();
+    ASSERT_EQ(highestPriorityElement, 4);
+    highestPriorityElement = mMaxHeap.removeHighestPriority();
+    ASSERT_EQ(highestPriorityElement, 3);
+    highestPriorityElement = mMaxHeap.removeHighestPriority();
+    ASSERT_EQ(highestPriorityElement, 2);
+    highestPriorityElement = mMaxHeap.removeHighestPriority();
+    ASSERT_EQ(highestPriorityElement, 1);
 }

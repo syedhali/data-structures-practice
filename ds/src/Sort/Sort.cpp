@@ -14,7 +14,7 @@ namespace ds {
 
         void Print(std::string identifier, std::vector<int> &list) {
             std::cout << identifier << " - List contains: [";
-            for (int i = 0; i < list.size(); ++i) {
+            for (int i = 0; i < (int)list.size(); ++i) {
                 std::cout << list[i];
                 if (i == (int) list.size() - 1) {
                     std::cout << "]";
@@ -32,8 +32,8 @@ namespace ds {
         }
 
         void SelectionSort(std::vector<int> &list) {
-            for (int i = 0; i < list.size(); ++i) {
-                for (int j = i + 1; j < list.size(); ++j) {
+            for (int i = 0; i < (int)list.size(); ++i) {
+                for (int j = i + 1; j < (int)list.size(); ++j) {
                     if (list[i] > list[j]) {
                         Swap(list, i, j);
                     }
@@ -42,7 +42,7 @@ namespace ds {
         }
 
         void BubbleSort(std::vector<int> &list) {
-            for (int i = (int) list.size() - 1; i >= 0; --i) {
+            for (int i = (int)list.size() - 1; i >= 0; --i) {
                 bool swapped = false;
                 for (int j = 0; j < i; ++j) {
                     if (list[j] > list[j + 1]) {
@@ -61,7 +61,7 @@ namespace ds {
         }
 
         void InsertionSortWithIncrement(std::vector<int> &list, int startIndex, int increment) {
-            for (int i = startIndex; i < list.size(); i += increment) {
+            for (int i = startIndex; i < (int)list.size(); i += increment) {
                 for (int j = std::min(i + increment, (int)list.size() - 1); j - increment >= 0; j -= increment) {
                     if (list[j] < list[j - increment]) {
                         Swap(list, j, j - increment);

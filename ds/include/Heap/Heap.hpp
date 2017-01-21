@@ -16,9 +16,9 @@ namespace ds {
             HeapFullException() : std::runtime_error("Heap is full") {}
         };
 
-        class HeapUnderflowException : std::runtime_error {
+        class HeapEmptyException : std::runtime_error {
         public:
-            HeapUnderflowException() : std::runtime_error("Index is less than 0") {}
+            HeapEmptyException() : std::runtime_error("Heap is empty") {}
         };
 
         template<typename T>
@@ -35,7 +35,7 @@ namespace ds {
             }
             ~Heap() {}
 
-            T getElementAtIndex(int index) throw(HeapUnderflowException) {
+            T getElementAtIndex(int index) throw(HeapEmptyException) {
                 return mElements[index];
             }
 
@@ -96,6 +96,21 @@ namespace ds {
                 mCount++;
             }
 
+            virtual T removeHighestPriority() throw(HeapEmptyException) {
+                if (isEmpty()) {
+                    throw HeapEmptyException();
+                }
+
+                T highestPriorityElement = mElements[0];
+                mElements[0] = mElements[mCount - 1];
+                mCount--;
+                siftDown(0);
+
+                std::cout << "highest priority element: " << highestPriorityElement << std::endl;
+
+                return highestPriorityElement;
+            }
+
             virtual void siftDown(int index) {}
             virtual void siftUp(int index) {}
         };
@@ -103,8 +118,12 @@ namespace ds {
         template<typename T>
         class MinHeap : public Heap<T> {
         public:
-            void insert(T element) throw(HeapFullException) {
+            void insert(T element) throw(HeapFullException) override {
                 Heap<T>::insert(element);
+            }
+
+            virtual T removeHighestPriority() throw(HeapEmptyException) override {
+                return Heap<T>::removeHighestPriority();
             }
 
             virtual void siftDown(int index) override {
@@ -148,8 +167,12 @@ namespace ds {
         template<typename T>
         class MaxHeap : public Heap<T> {
         public:
-            void insert(T element) throw(HeapFullException) {
+            void insert(T element) throw(HeapFullException) override {
                 Heap<T>::insert(element);
+            }
+
+            virtual T removeHighestPriority() throw(HeapEmptyException) override {
+                return Heap<T>::removeHighestPriority();
             }
 
             virtual void siftDown(int index) override {
