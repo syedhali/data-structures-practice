@@ -74,10 +74,7 @@ namespace ds {
                 mElements[j] = temp;
             }
 
-            virtual void siftDown(int index) {}
-            virtual void siftUp(int index) {}
-
-            void insert(T element) throw(HeapFullException) {
+            virtual void insert(T element) throw(HeapFullException) {
                 if (isFull()) {
                     throw HeapFullException();
                 }
@@ -86,11 +83,18 @@ namespace ds {
                 siftUp(mCount);
                 mCount++;
             }
+
+            virtual void siftDown(int index) {}
+            virtual void siftUp(int index) {}
         };
 
         template<typename T>
-        class MinHeap : Heap<T> {
+        class MinHeap : public Heap<T> {
         public:
+            void insert(T element) throw(HeapFullException) {
+                Heap<T>::insert(element);
+            }
+
             virtual void siftDown(int index) override {
                 int leftChildIndex = Heap<T>::getLeftChildIndex(index);
                 int rightChildIndex = Heap<T>::getRightChildIndex(index);
@@ -130,8 +134,12 @@ namespace ds {
         };
 
         template<typename T>
-        class MaxHeap : Heap<T> {
+        class MaxHeap : public Heap<T> {
         public:
+            void insert(T element) throw(HeapFullException) {
+                Heap<T>::insert(element);
+            }
+
             virtual void siftDown(int index) override {
                 int leftChildIndex = Heap<T>::getLeftChildIndex(index);
                 int rightChildIndex = Heap<T>::getRightChildIndex(index);

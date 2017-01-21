@@ -22,6 +22,13 @@ protected:
     }
 };
 
-TEST_F(HeapTest, Empty) {
-    ASSERT_TRUE(true);
+TEST_F(HeapTest, MinHeapEmpty) {
+    ASSERT_TRUE(mMinHeap.getCount() == 0);
+    ASSERT_EQ(mMinHeap.getParentIndex(0), 0);
+    ASSERT_EQ(mMinHeap.getRightChildIndex(0), -1);
+    ASSERT_EQ(mMinHeap.getLeftChildIndex(0), -1);
+}
+
+TEST_F(HeapTest, Insertion) {
+    mMinHeap.insert(10);
 }
