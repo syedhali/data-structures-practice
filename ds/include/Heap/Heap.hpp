@@ -16,19 +16,26 @@ namespace ds {
             HeapFullException() : std::runtime_error("Heap is full") {}
         };
 
+        class HeapUnderflowException : std::runtime_error {
+        public:
+            HeapUnderflowException() : std::runtime_error("Index is less than 0") {}
+        };
+
         template<typename T>
         class Heap {
         private:
             std::vector<T> mElements = std::vector<T>();
-            int mCount;
-            int mMaxSize = MAX_SIZE;
+            int mCount = 0;
+            int mMaxSize;
 
         public:
-            Heap() {}
-            Heap(int maxSize) : mMaxSize(maxSize) {}
+            Heap() : Heap(MAX_SIZE) {}
+            Heap(int maxSize) : mMaxSize(maxSize) {
+                mElements = std::vector<T>(maxSize);
+            }
             ~Heap() {}
 
-            T getElementAtIndex(int index) {
+            T getElementAtIndex(int index) throw(HeapUnderflowException) {
                 return mElements[index];
             }
 
@@ -41,6 +48,10 @@ namespace ds {
             }
 
             int getParentIndex(int index) {
+                if (isEmpty()) {
+                    return -1;
+                }
+
                 if (index < 0 || index > mCount) {
                     return -1;
                 }
@@ -79,8 +90,9 @@ namespace ds {
                     throw HeapFullException();
                 }
 
-                mElements[mCount] = element;
-                siftUp(mCount);
+                int index = mCount;
+                mElements[index] = element;
+                siftUp(index);
                 mCount++;
             }
 

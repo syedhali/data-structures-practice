@@ -16,19 +16,62 @@ protected:
         mMinHeap = MinHeap<int>();
         mMaxHeap = MaxHeap<int>();
     }
-
-    ~HeapTest() {
-
-    }
 };
 
 TEST_F(HeapTest, MinHeapEmpty) {
-    ASSERT_TRUE(mMinHeap.getCount() == 0);
-    ASSERT_EQ(mMinHeap.getParentIndex(0), 0);
+    ASSERT_EQ(mMinHeap.getCount(), 0);
+    ASSERT_EQ(mMinHeap.getParentIndex(0), -1);
     ASSERT_EQ(mMinHeap.getRightChildIndex(0), -1);
     ASSERT_EQ(mMinHeap.getLeftChildIndex(0), -1);
 }
 
-TEST_F(HeapTest, Insertion) {
-    mMinHeap.insert(10);
+TEST_F(HeapTest, MinHeapInsertionFull) {
+    for (int i = 0; i < MAX_SIZE; ++i) {
+        ASSERT_NO_THROW(mMinHeap.insert(i));
+    }
+    ASSERT_THROW(mMinHeap.insert(100), HeapFullException);
+}
+
+TEST_F(HeapTest, MinHeapInsertion) {
+    ASSERT_NO_THROW(mMinHeap.insert(10));
+    ASSERT_EQ(mMinHeap.getCount(), 1);
+    ASSERT_EQ(mMinHeap.getElementAtIndex(0), 10);
+    ASSERT_NO_THROW(mMinHeap.insert(2));
+    ASSERT_EQ(mMinHeap.getCount(), 2);
+    ASSERT_EQ(mMinHeap.getElementAtIndex(0), 2);
+    ASSERT_EQ(mMinHeap.getElementAtIndex(1), 10);
+    ASSERT_NO_THROW(mMinHeap.insert(12));
+    ASSERT_EQ(mMinHeap.getCount(), 3);
+    ASSERT_EQ(mMinHeap.getElementAtIndex(0), 2);
+    ASSERT_EQ(mMinHeap.getElementAtIndex(1), 10);
+    ASSERT_EQ(mMinHeap.getElementAtIndex(2), 12);
+}
+
+TEST_F(HeapTest, MaxHeapEmpty) {
+    ASSERT_EQ(mMaxHeap.getCount(), 0);
+    ASSERT_EQ(mMaxHeap.getParentIndex(0), -1);
+    ASSERT_EQ(mMaxHeap.getRightChildIndex(0), -1);
+    ASSERT_EQ(mMaxHeap.getLeftChildIndex(0), -1);
+}
+
+TEST_F(HeapTest, MaxHeapInsertionFull) {
+    for (int i = 0; i < MAX_SIZE; ++i) {
+        ASSERT_NO_THROW(mMaxHeap.insert(i));
+    }
+    ASSERT_THROW(mMaxHeap.insert(100), HeapFullException);
+}
+
+TEST_F(HeapTest, MaxHeapInsertion) {
+    ASSERT_NO_THROW(mMaxHeap.insert(10));
+    ASSERT_EQ(mMaxHeap.getCount(), 1);
+    ASSERT_EQ(mMaxHeap.getElementAtIndex(0), 10);
+    ASSERT_NO_THROW(mMaxHeap.insert(2));
+    ASSERT_EQ(mMaxHeap.getCount(), 2);
+    ASSERT_EQ(mMaxHeap.getElementAtIndex(0), 10);
+    ASSERT_EQ(mMaxHeap.getElementAtIndex(1), 2);
+    ASSERT_NO_THROW(mMaxHeap.insert(12));
+    ASSERT_EQ(mMaxHeap.getCount(), 3);
+    ASSERT_EQ(mMaxHeap.getElementAtIndex(0), 12);
+    ASSERT_EQ(mMaxHeap.getElementAtIndex(1), 2);
+    ASSERT_EQ(mMaxHeap.getElementAtIndex(2), 10);
 }
